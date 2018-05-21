@@ -27,11 +27,23 @@ Create a roladex program using C#.
 | Start of Project / Repository Created   | 9:15am |
 | Create Initial Visual Studio Solution   | 9:27am |
 | Install Entity framework, update jQuery |        |
-| and boostrap, add PhoneModel,           |        |
-|RoladexContext, and connectionString.    | 10:02am|
+|   and boostrap, add PhoneModel,         |        |
+|   RoladexContext, and connectionString. | 10:02am|
+| Migrate database and seeded.            | 11:15am|
+| Lunch Start				  | Noon   |
+| Lunch End				  | 12:45pm|
+| Added jQuery, javaScript, and css files.| 	   |
+|   Added gridview for browsing on default|        |
+|   page. Added class to handle CRUD      |        |
+|operations.				  | 1:35PM |
+
+
 
 # Outside Resources Used
 http://www.entityframeworktutorial.net/
-
+https://msdn.microsoft.com/en-us/library/jj205424(v=vs.113).aspx
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3
+tableSample.html myCode
+C# inclassAssignment6 - myCode
 
 ## Known Problems, Issues, And/Or Errors in the Program
