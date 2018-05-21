@@ -25,9 +25,13 @@ Create a roladex program using C#.
 | Description                             | Time   |
 |-----------------------------------------|--------|
 | Start of Project / Repository Created   | 9:15am |
-| Initial Visual Studio Solution Created  | 9:27am |
+| Create Initial Visual Studio Solution   | 9:27am |
+| Install Entity framework, update jQuery |        |
+| and boostrap, add PhoneModel,           |        |
+|RoladexContext, and connectionString.    | 10:02am|
 
 # Outside Resources Used
+http://www.entityframeworktutorial.net/
 
 
 ## Known Problems, Issues, And/Or Errors in the Program
