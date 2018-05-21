@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace Roladex
 {
-    public class PersonModel
+    public class Person
     {
         public int PersonID { get; set; }
         public string LastName { get; set; }
@@ -26,6 +26,8 @@ namespace Roladex
         public string Address2 { get; set; }
 
         public string State { get; set; }
+
+        public string City { get; set; }
 
         public string Zipcode { get; set; }
 

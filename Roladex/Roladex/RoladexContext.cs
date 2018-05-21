@@ -14,6 +14,6 @@ namespace Roladex
             Database.SetInitializer<RoladexContext>(new CreateDatabaseIfNotExists<RoladexContext>());
         }
 
-        public DbSet<PersonModel> Persons { get; set; }
+        public DbSet<Person> Persons { get; set; }
     }
 }
