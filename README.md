@@ -36,7 +36,7 @@ Create a roladex program using C#.
 |   Added gridview for browsing on default|        |
 |   page. Added class to handle CRUD      |        |
 |operations.				  | 1:35PM |
-
+| Added CRUD Opperations		  | 4:55PM |
 
 
 # Outside Resources Used
@@ -45,5 +45,6 @@ https://msdn.microsoft.com/en-us/library/jj205424(v=vs.113).aspx
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3
 tableSample.html myCode
 C# inclassAssignment6 - myCode
+https://stackoverflow.com/questions/11406428/why-the-data-cannot-be-updated-in-this-gridview
 
 ## Known Problems, Issues, And/Or Errors in the Program

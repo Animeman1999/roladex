@@ -1,4 +1,4 @@
-﻿//Basic CRUD operations for person
+﻿//Basic CRUD operations for a person.
 
 using System;
 using System.Collections.Generic;
