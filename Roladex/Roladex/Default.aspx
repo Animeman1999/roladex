@@ -3,42 +3,58 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        
+       
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
+         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="PersonSQL" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical">
+             <AlternatingRowStyle BackColor="#CCCCCC" />
+            <Columns>
+                <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
+                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                <asp:BoundField DataField="AltPhone" HeaderText="AltPhone" SortExpression="AltPhone" />
+                <asp:BoundField DataField="Address1" HeaderText="Address1" SortExpression="Address1" />
+                <asp:BoundField DataField="Address2" HeaderText="Address2" SortExpression="Address2" />
+                <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+                <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                <asp:BoundField DataField="Zipcode" HeaderText="Zipcode" SortExpression="Zipcode" />
+            </Columns>
+             <FooterStyle BackColor="#CCCCCC" />
+             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+             <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+             <SortedAscendingCellStyle BackColor="#F1F1F1" />
+             <SortedAscendingHeaderStyle BackColor="#808080" />
+             <SortedDescendingCellStyle BackColor="#CAC9C9" />
+             <SortedDescendingHeaderStyle BackColor="#383838" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="PersonSQL" runat="server" ConnectionString="<%$ ConnectionStrings:RoladexContext %>" SelectCommand="SELECT [LastName], [FirstName], [CompanyName], [Email], [Phone], [AltPhone], [Address1], [Address2], [State], [City], [Zipcode] FROM [People] ORDER BY [LastName], [FirstName], [CompanyName]"></asp:SqlDataSource>
+        
     </div>
 
 
+
+
+
+
+
+
+<%--<script src="scripts/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="scripts/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="scripts/jquery.dataTables.min.js"></script>
+<script src="scripts/dataTables.bootstrap.min.js"></script>
+
+    <script>
+        $(window).load(function () {
+      $("#MainContent_GridView1").DataTable();
+    
+  });
+</script>--%>
 
 </asp:Content>
