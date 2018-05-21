@@ -25,7 +25,7 @@ Create a roladex program using C#.
 | Description                             | Time   |
 |-----------------------------------------|--------|
 | Start of Project / Repository Created   | 9:15am |
-| Initial File Created                    |        |
+| Initial Visual Studio Solution Created  | 9:27am |
 
 # Outside Resources Used
 
