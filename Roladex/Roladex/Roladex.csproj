@@ -135,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AddingPerson.aspx" />
     <Content Include="AddPerson.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -147,6 +146,7 @@
     <Content Include="Content\dataTables.bootstrap.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EditPerson.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -230,13 +230,6 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddingPerson.aspx.cs">
-      <DependentUpon>AddingPerson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddingPerson.aspx.designer.cs">
-      <DependentUpon>AddingPerson.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AddPerson.aspx.cs">
       <DependentUpon>AddPerson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +260,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditPerson.aspx.cs">
+      <DependentUpon>EditPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditPerson.aspx.designer.cs">
+      <DependentUpon>EditPerson.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -40,7 +40,10 @@ Create a roladex program using C#.
 | Started Work 5/22/2018		  |10:45AM |
 | Added form to add a person and updated  |        |
 |  css.					  |12:55PM |
-
+| Interrupted with phone call.		  | -25min |
+| Moved edit and remove from default to   |        |
+|   EditPerson. Added results view to     |        |
+|   default. 				  | 2:30PM |
 
 # Outside Resources Used
 http://www.entityframeworktutorial.net/
