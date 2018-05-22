@@ -10,24 +10,24 @@
 namespace Roladex {
     
     
-    public partial class SiteMaster {
+    public partial class AddPerson {
         
         /// <summary>
-        /// home control.
+        /// TestButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor home;
+        protected global::System.Web.UI.WebControls.Button TestButton;
         
         /// <summary>
-        /// MainContent control.
+        /// MessageLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label MessageLabel;
     }
 }

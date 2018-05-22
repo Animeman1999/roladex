@@ -14,7 +14,9 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <form runat="server">
@@ -37,9 +39,17 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
-        </asp:ScriptManager>
+        </asp:ScriptManager>     
+        <div class="nav-container">
+        <hr style="border: 1px solid crimson">
+                <ul class="nav1"><li><a id="home" runat="server" href="~/">Home</a></li>
+                    <li><a runat="server" href="~/About">About</a></li>
+                    <li><a runat="server" href="~/Contact">Contact</a></li>
+                    <li><a runat="server" href="~/AddPerson">Add Contact</a></li>
+                </ul>
+    </div>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+<%--        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -47,6 +57,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                    </ul>
                     <a class="navbar-brand" runat="server" href="~/">Roladex</a>
                 </div>
                 <div class="navbar-collapse collapse">
@@ -57,7 +72,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>--%>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

@@ -35,8 +35,11 @@ Create a roladex program using C#.
 | Added jQuery, javaScript, and css files.| 	   |
 |   Added gridview for browsing on default|        |
 |   page. Added class to handle CRUD      |        |
-|operations.				  | 1:35PM |
+|   operations.				  | 1:35PM |
 | Added CRUD Opperations		  | 4:55PM |
+| Started Work 5/22/2018		  |10:45AM |
+| Added form to add a person and updated  |        |
+|  css.					  |12:55PM |
 
 
 # Outside Resources Used
