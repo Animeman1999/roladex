@@ -27,6 +27,16 @@ namespace Roladex
             db.SaveChanges();
         }
 
+        public List<Person> CheckForContact(string email, string phone, string altPhone)
+        {
+
+            RoladexContext db = new RoladexContext();
+
+            List<Person> list = db.Persons.Where(p => p.Email == email || p.Phone == phone || p.AltPhone == altPhone).ToList();
+
+            return list;
+        }
+
         //Edit a person
         public void EditPerson(int personId, string lastName, string firstName, string companyName, string email, string phone, string altPhone, string address1, 
             string address2, string state, string city, string zipcode)

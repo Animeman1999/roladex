@@ -11,28 +11,28 @@ namespace Roladex
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            GridView1.Visible = false;
+            MessageLabel.Text = "";
         }
 
-        public String getWileLoopData()
+        
+
+        protected void SearchButton_Click(object sender, EventArgs e)
         {
-            CRUD crud = new CRUD();
-            var persons = crud.GetAllPersons();
-            string htmlStr = "";
-            foreach (var person in persons)
-            {
-                 htmlStr += "<tr>" + td(person.FirstName) + td(person.LastName) + td(person.CompanyName) + td (person.Phone) + td(person.AltPhone) + td(person.Address1)
-                    + td(person.Address2) + td(person.State) + td(person.City) + td(person.Zipcode)
-                    + "<tr>";
-            }
-            
+            GridView1.Visible = true;
 
-            return htmlStr;
-        }
+            //GridView1.DataBind();
+            //if (GridView1.Rows.Count == 0)
+            //{
+            //    StartGrid.Visible = true;
+            //}else
+            //{
+            //    StartGrid.Visible = false;
+            //}
 
-        private String td(string tdString)
-        {
-            return "<td>" + tdString + "</td>";
-        }
+          //  MessageLabel.Text = "row = " + GridView1.Rows.Count;
+        
+}
+
     }
 }

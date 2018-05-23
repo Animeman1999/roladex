@@ -44,6 +44,8 @@ Create a roladex program using C#.
 | Moved edit and remove from default to   |        |
 |   EditPerson. Added results view to     |        |
 |   default. 				  | 2:30PM |
+| Started Woek 5/23/2018 		  | 7:10AM |
+|
 
 # Outside Resources Used
 http://www.entityframeworktutorial.net/

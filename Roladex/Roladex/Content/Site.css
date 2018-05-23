@@ -11,6 +11,10 @@ body {
     padding-right: 15px;
 }
 
+.jumbotron {
+    background-image: url('../Properties/rolodex.png');
+    background-position-y: 20%;
+}
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,
@@ -19,23 +23,12 @@ textarea {
 }
 
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
-    }
-
-    .body-content {
-        padding: 0;
-    }
-}
-
 
 .navbar-collapse {
     visibility: hidden;
 }
 
-.palel-primary {
+.panel-primary {
     border-color: #bce8f1;
 }
 
@@ -45,6 +38,10 @@ textarea {
 
 .panel-primary > .panel-body {
     background-color: #EDEDED;
+}
+
+.panel-primary {
+    width: 100%;
 }
 
 .nav-container {
@@ -62,14 +59,49 @@ ul.nav1 li {
 }
 
 .Grid td{
-    padding: 2px 4px;
+    padding: 8px;
 }
 
 .Grid th {
-    padding: 4px;
+    padding: 8px;
     text-align: center;
 }
 
+#example1 th {
+    background-color: #337ab7;
+    color: white;
+}
+
+#example1 {
+    border: 2px solid #337ab7;
+}
+
+.down {
+    padding-top: 20px;
+}
+
+.card {
+    background-color: white;
+    opacity: .8;
+    width: 260px;
+    color: #337ab7;
+    text-align: center;
+    display: inline-block;
+    font-weight: bolder;
+    text-shadow: 2.5px 1.5px blue;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+
+    .body-content {
+        padding: 0;
+    }
+}
 
 /*.nav-container {
     height: 190px;
@@ -81,6 +113,10 @@ ul.nav1 li {
 
     .nav-container {
         height: 190px;
+    }
+
+    .card {
+        width: 200px;
     }
 }
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -94,6 +130,10 @@ ul.nav1 li {
     .nav-container {
         height: 190px;
     }
+
+    .card {
+        width: 200px;
+    }
 }
 /* ----------- Galaxy S6 ----------- */
 
@@ -106,6 +146,9 @@ ul.nav1 li {
     .nav-container {
         height: 190px;
     }
+    .card {
+        width: 200px;
+    }
 }
 /* ----------- Galaxy S4, S5 and Note 3 ----------- */
 
@@ -117,5 +160,8 @@ ul.nav1 li {
 
     .nav-container {
         height: 190px;
+    }
+    .card {
+        width: 200px;
     }
 }
