@@ -4,24 +4,24 @@
 
 <%-- Styling for the page. --%>
     <link href="Content/DataTables/css/dataTables.bootstrap.css" rel="stylesheet" />
-    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />--%>
 
-<%-- The following bootstraps and jquery are needed for the search function--%>
-    <%--<script src="Scripts/jquery-3.3.1.min.js"></script>--%>
-    <%--<script src="Scripts/bootstrap.min.js"></script>--%>
-    <script src="Scripts/DataTables/dataTables.bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link href="Content/clientsearch.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 11]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 <%-- Start of page content --%>
-
 <%-- Data table --%>
    <section class="content">
+       
+    <div class ="title text-center"><h3>Client Side Search</h3></div>
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -48,14 +48,25 @@
           </div>
         </div>
       </div>
+       <div id="errorMessage"></div>
     </section>
 
 
 <%-- This script is used search for all the fields of data on the table. --%>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.dataTables.min.js"></script>
+    <script src="Scripts/dataTables.bootstrap.min.js"></script>
+
 <script>
-    $(function () {
-        $("#example1").DataTable();
-    });
+    try {
+        $(document).ready(function () {
+                $("#example1").DataTable();
+            });
+    } catch (err) {
+        document.getElementById("errorMessage").innerHTML = err.message;
+    }
+    
 </script>
 
 </asp:Content>

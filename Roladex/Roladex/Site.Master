@@ -42,11 +42,12 @@
         </asp:ScriptManager>     
         <div class="nav-container">
         <hr style="border: 1px solid crimson">
-                <ul class="nav1"><li><a id="home" runat="server" href="~/">Home</a></li>
-                    <li><a runat="server" href="~/About">About</a></li>
-                    <li><a runat="server" href="~/ClientSearch">Client Search</a></li>
-                    <li><a runat="server" href="~/AddPerson">Add Contact</a></li>
-                    <li><a runat="server" href="~/EditPerson">Edit Contact</a></li>
+                <ul class="nav1">
+                    <li><a id="home" class="about" runat="server" href="~/">About</a></li>
+                    <li><a class="serversearch" runat="server" href="~/ServerSearch">Server Search</a></li>
+                    <li><a class="clientsearch" runat="server" href="~/ClientSearch">Client Search</a></li>
+                    <li><a class="addperson" runat="server" href="~/AddPerson">Add Contact</a></li>
+                    <li><a class="editperson" runat="server" href="~/EditPerson">Edit Contact</a></li>
                 </ul>
         </div>
         <div class="jumbotron text-center">

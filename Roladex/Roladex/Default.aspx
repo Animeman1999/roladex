@@ -1,119 +1,27 @@
-﻿<%@ Page Title="Server Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Roladex.Default" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="down text-center">
+﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Roladex.About" %>
 
-        <asp:TextBox ID="SearchTextBox" runat="server"></asp:TextBox>
-        <asp:Button ID="SearchButton" runat="server" Text="Search" OnClick="SearchButton_Click" />
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="Content/about.css" rel="stylesheet" />
 
-        <asp:Label ID="MessageLabel" runat="server" Text="MessageLabel"></asp:Label>
-
-    </div>
-    <div class="down">
-
-        <asp:GridView ID="GridView1" CssClass="Grid" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" AllowPaging="True" EmptyDataText="No Results Found"
-            BackColor="White" BorderColor="#337AB7" BorderStyle="Solid" BorderWidth="2px" CellPadding="10" CellSpacing="5" ForeColor="Black" GridLines="Vertical">
-            <AlternatingRowStyle BackColor="#ededed" />
-            <Columns>
-                <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-                <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
-                <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
-                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                <asp:BoundField DataField="AltPhone" HeaderText="AltPhone" SortExpression="AltPhone" />
-                <asp:BoundField DataField="Address1" HeaderText="Address1" SortExpression="Address1" />
-                <asp:BoundField DataField="Address2" HeaderText="Address2" SortExpression="Address2" />
-                <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
-                <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                <asp:BoundField DataField="Zipcode" HeaderText="Zipcode" SortExpression="Zipcode" />
-            </Columns>
-             <FooterStyle BackColor="#337ab7" />
-             <HeaderStyle BackColor="#337ab7" Font-Bold="True" ForeColor="White" />
-             <PagerStyle BackColor="#337ab7" ForeColor="White" HorizontalAlign="Center" />
-             <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-             <SortedAscendingCellStyle BackColor="#dae0ea" />
-             <SortedAscendingHeaderStyle BackColor="#012051" />
-             <SortedDescendingCellStyle BackColor="#dae0ea" />
-             <SortedDescendingHeaderStyle BackColor="#012051" />
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RoladexContext %>" SelectCommand="SELECT [LastName], [FirstName], [CompanyName], [Email], [Phone], [AltPhone], [Address1], [Address2], [State], [City], [Zipcode] FROM [People] WHERE (([LastName] LIKE '%' + @LastName + '%') OR ([FirstName] LIKE '%' + @FirstName + '%') OR ([CompanyName] LIKE '%' + @CompanyName + '%') OR ([Address1] LIKE '%' + @Address1 + '%') OR ([Address2] LIKE '%' + @Address2 + '%') OR ([AltPhone] LIKE '%' + @AltPhone + '%') OR ([City] LIKE '%' + @City + '%') OR ([Email] LIKE '%' + @Email + '%') OR ([Phone] LIKE '%' + @Phone + '%') OR ([State] LIKE '%' + @State + '%') OR ([Zipcode] LIKE '%' + @Zipcode + '%'))">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="SearchTextBox" Name="LastName" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="FirstName" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="CompanyName" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="Address1" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="Address2" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="AltPhone" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="City" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="Email" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="Phone" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="State" PropertyName="Text" Type="String" />
-                <asp:ControlParameter ControlID="SearchTextBox" Name="Zipcode" PropertyName="Text" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-        <asp:SqlDataSource ID="Search" runat="server"></asp:SqlDataSource>
-
-    </div>
-    <div>
-    </div>
-
-
-
-
-  <%--  <!-- jQuery 2.2.3 need this one -->
-<script src="scripts/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="scripts/bootstrap.min.js"></script>
-<!-- DataTables -->
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
-<script src="scripts/dataTables.bootstrap.min.js"></script>
-
-    <div>
-        <h1>Roladex</h1>
-    </div>
-   <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Company Name</th>
-                    <th>Phone Number</th>
-                    <th>Alternate Phone</th>
-                    <th>Address 1</th>
-                    <th>Address 2</th>
-                    <th>State</th>
-                    <th>City</th>
-                    <th>Zipcode</th>
-                </tr>
-                </thead>
-                <tbody>
-                  <%=getWileLoopData() %>
-                    </tbody>
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
-
-
-<script>
-    $(document).ready(function () {
-        $("#example1").DataTable({
-            "serverSide": false
-        });
-    });
-</script>--%>
+    <h2>Rolodex</h2>
+    <h3>Website Description</h3>
+    <p>This site is a rolodex program that allows the user to view, add, and edit contacts. It was designed using code first Entity Framework. Migration has been added
+        for seeding the database.</p>
+    <h3>Server Search</h3>
+    <p>On the "Server Search" page the user can search the rolodex. It starts with a search box that will allow the user to input what type of characters to search for
+        and will then search all fields that contains those characters. It does this doing a server-side search using gridview to display the results. </p>
+    <h3>Client Search</h3>
+    <p>On the "Client Search" page the user can search the rolodex. It starts with displaying the entire data from the rolodex in a table. The user can browse through 
+        the pages of the table and select how many contacts to view on each page. Each column can be sorted. There is also a search box that when the user starts to type,
+        the table will delete contacts that does not match the user’s typing in a field. This search is done client side using jQuery and bootstrap on a html table. 
+    </p>
+    <h3>Add Contact</h3>
+    <p>On the "Add Contact page the user can add a new contact to the rolodex. It starts with a form that the user can use to add a new contact. Current rules are set 
+        to enforce that a contact must have first name and a last name (This could easily be changed to include other fields to be required). It uses jQuery for validation.
+        After submission, it will check to see if the email entered or the phone numbers entered match any in the database. If the values do match it will display the names 
+        of the records found that match and asks the user if they wish to still add the new contact (The fields that are checked against the database could easily be changed)
+        . Once a new contact has been added a success message is added and the form is reset.</p>
+    <h3>Edit Contact</h3>
+    <p>On the "Edit Contact" page the user can browse through the database and edit any contact, or they can delete any contact. Each column can be clicked on for sorting. 
+        This is done using gridview.</p>
 </asp:Content>

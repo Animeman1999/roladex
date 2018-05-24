@@ -102,6 +102,9 @@ ul.nav1 li {
         padding: 0;
     }
 }
+.nav1 {
+    margin-top: 30px;
+}
 
 /*.nav-container {
     height: 190px;

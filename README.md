@@ -10,7 +10,6 @@ Create a roladex program using C#.
 
 ### Solution Requirements:
 
-*
 * Entity Framework (Code First)
 * Web forms
 * Bootstrap
@@ -44,8 +43,19 @@ Create a roladex program using C#.
 | Moved edit and remove from default to   |        |
 |   EditPerson. Added results view to     |        |
 |   default. 				  | 2:30PM |
-| Started Woek 5/23/2018 		  | 7:10AM |
-|
+| Started Woek 5/23/2018 		  | 8:15AM |
+| Added client-side search and updated 	  |   	   |
+|   jQuery, server side search, add 	  | 	   |
+|   contact, about, and CSS on all pages. | 2:30PM |
+| Home from Work and starte working       |10:30PM |
+| Renamed Default.aspx to 		  |        |
+|   ServerSearch.aspx, and About.aspx to  |        |
+|   Default.aspx, added CSS pages for each|        |
+|   page to handle menu highlights, added |        |
+|   comments, fixed bug in EditPerson.ASPX|        |
+|   tested in Chrome, Edge, Firefox,      |        |
+|   Internet Explorer, and Opera.         | 1:35AM |
+
 
 # Outside Resources Used
 http://www.entityframeworktutorial.net/
@@ -56,3 +66,4 @@ C# inclassAssignment6 - myCode
 https://stackoverflow.com/questions/11406428/why-the-data-cannot-be-updated-in-this-gridview
 
 ## Known Problems, Issues, And/Or Errors in the Program
+Internet Explorer has a known bug with displaying properly when using visual studios with dataTables.bootstrap. Should view properly on server, but I have not tested to confirm this. Can confirm the problem when viewing via file is fixed when using PHP on a server.

@@ -28,6 +28,9 @@ namespace Roladex
 
         }
 
+        protected void SearchButton_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

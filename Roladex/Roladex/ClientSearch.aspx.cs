@@ -13,6 +13,8 @@ namespace Roladex
         {
 
         }
+
+        //This method gets all the contacts from the database and builds a table.
         public String getWileLoopData()
         {
             CRUD crud = new CRUD();
@@ -20,18 +22,19 @@ namespace Roladex
             string htmlStr = "";
             foreach (var person in persons)
             {
-                htmlStr += "<tr>" + td(person.FirstName) + td(person.LastName) + td(person.Email) + td(person.CompanyName) + td(person.Phone) + td(person.AltPhone) + td(person.Address1)
+                htmlStr += "<tr>\n" + td(person.FirstName) + td(person.LastName) + td(person.Email) + td(person.CompanyName) + td(person.Phone) + td(person.AltPhone) + td(person.Address1)
                    + td(person.Address2) + td(person.State) + td(person.City) + td(person.Zipcode)
-                   + "</tr>";
+                   + "</tr>\n";
             }
 
 
             return htmlStr;
         }
 
+        //Method to build the table data tags.
         private String td(string tdString)
         {
-            return "<td>" + tdString + "</td>";
+            return "<td>" + tdString + "</td>\n";
         }
     }
 }
