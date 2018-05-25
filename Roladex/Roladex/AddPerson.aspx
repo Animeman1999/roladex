@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Add Person" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddPerson.aspx.cs" Inherits="Roladex.AddPerson" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
    
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="Content/addperson.css" rel="stylesheet" />
     <div class="down">
 

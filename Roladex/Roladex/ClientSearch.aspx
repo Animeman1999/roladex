@@ -2,14 +2,17 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <%-- Styling for the page. --%>
+    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="Content/DataTables/css/dataTables.bootstrap.css" rel="stylesheet" />
 
     <link href="Content/clientsearch.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 11]>
+  <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
@@ -18,7 +21,7 @@
 <%-- Data table --%>
    <section class="content">
        
-    <div class ="title text-center"><h3>Client Side Search</h3></div>
+      <div class ="title text-center"><h3>Client Side Search</h3></div>
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
@@ -50,6 +53,8 @@
       </div>
        <div id="errorMessage"></div>
     </section>
+
+
 
 
 <%-- This script is used search for all the fields of data on the table. --%>
